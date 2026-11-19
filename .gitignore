@@ -1,0 +1,57 @@
+# .gitignore dùng chung của repo (không ignore chính nó).
+# Không ignore: dữ liệu (data/raw, data/processed), notebook, ảnh, PDF báo cáo — vì đề bài yêu cầu nộp.
+
+# --- Secret ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Đầu ra biên dịch LaTeX (giữ .tex và .pdf cuối cùng) ---
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+
+# --- File tạm của Word / Office ---
+~$*
+.~lock.*#
+
+# --- Rác hệ điều hành / IDE ---
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# --- Phòng tạo nhầm bản local của thư mục ngoài repo (workspace chuẩn đặt chúng ở ngoài repository/) ---
+/runtime/
+/private/
+/archive/
